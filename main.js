@@ -2146,30 +2146,36 @@ let users = [
 // 3) delete function yaradin ve ora id gonderdiyinizde mapden hemin istifadecini silsin ve hemin istifadeci artiq
 // silinibse error versinki bu istifadeci artiq mapde movcud deyil
 
-// ? silinibse artiq istifadecinin olmadigi haqqinda error vermir, nece edim?
 // const deleteMap=(id)=>{
 //     try{
-
 //         let map = new Map()
-//         users.forEach((user)=>{
-//             map.set(user.id,user)
-
-//         })
+//         users.forEach((user)=>map.set(user.id,user))
 //         if (map.has(id)){
 //             map.delete(id)
 //           console.log(`ID-si ${id} olan istifadeci silindi` );
+//         }
+//         else{
+//             throw new Error(`ID-si ${id} olan istifadeci movcud deyil`);
 
-//         }else{
-//             throw new Error("`ID-si ${id} olan istifadeci movcud deyil`");
-//                 }
+//         }
+//          if(!map.has(id)) {
+//             throw new Error(`ID-si ${id} olan istifadeci movcud deyil, cunki silinib`);
+//         }
+       
 //         return map;
 //     }
-//     catch{
+//     catch (error){
 //         console.error(error.message);
-
+        
 //     }
-//     }
+// }
 // deleteMap(15)
+// deleteMap(15)
+// deleteMap(75)
+
+
+
+
 
 // 4) alinan umumi neticeni bir defe oldugu kimi objectde daha sonra arraye cevirerek logda yazin
 // const result = () => {
